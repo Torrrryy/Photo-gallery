@@ -1,0 +1,186 @@
+/* Контейнер навигации */
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border-bottom: 2px solid #ccc;
+    background: #f8f9fa;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Кнопка домой */
+.nav-home {
+    font-weight: 500;
+    color: white;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 10px rgba(0, 123, 255, 0.3);
+}
+
+.nav-home:hover {
+    background: linear-gradient(135deg, #0056b3, #0041a3);
+    transform: scale(1.08);
+    box-shadow: 2px 2px 15px rgba(0, 91, 255, 0.5);
+}
+
+/* Кнопка темы */
+.theme-toggle {
+    font-weight: 500;
+    background: transparent;
+    border: 2px solid #007BFF;
+    color: #007BFF;
+    border-radius: 25px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.theme-toggle:hover {
+    background: #007BFF;
+    color: white;
+}
+
+/* Поисковая строка */
+.search-input {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #007BFF;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background: white;
+    color: #333;
+    text-align: center;
+    box-shadow: 0px 2px 10px rgba(0, 123, 255, 0.2);
+}
+
+.search-input:focus {
+    border-color: #0056b3;
+    box-shadow: 0px 0px 10px rgba(0, 91, 255, 0.5);
+}
+
+/* Категории */
+.nav-item {
+    font-weight: 500;
+    color: white;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 10px rgba(0, 123, 255, 0.3);
+}
+
+.nav-item:hover {
+    background: linear-gradient(135deg, #0056b3, #0041a3);
+    transform: scale(1.08);
+    box-shadow: 2px 2px 15px rgba(0, 91, 255, 0.5);
+}
+
+.active {
+    background: linear-gradient(135deg, #003580, #002860);
+    box-shadow: 0px 0px 15px rgba(0, 56, 128, 0.7);
+}
+
+/* Сетка фотографий */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    justify-items: center;
+}
+
+/* Фотографии */
+.photo-item {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.photo-item:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Сообщение о пустом результате */
+.no-results {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* ===== ТЕМНАЯ ТЕМА ===== */
+body.dark {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark .nav-container {
+    background: #1e1e1e;
+    border-bottom: 2px solid #444;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+body.dark .nav-home,
+body.dark .nav-item {
+    background: linear-gradient(135deg, #333, #555);
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
+    color: #f0f0f0;
+}
+
+body.dark .nav-home:hover,
+body.dark .nav-item:hover {
+    background: linear-gradient(135deg, #444, #666);
+}
+
+body.dark .active {
+    background: linear-gradient(135deg, #555, #777);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+
+body.dark .search-input {
+    background: #1f1f1f;
+    color: #f0f0f0;
+    border-color: #666;
+}
+
+body.dark .search-input:focus {
+    border-color: #888;
+    box-shadow: 0px 0px 10px rgba(200, 200, 255, 0.3);
+}
+
+body.dark .theme-toggle {
+    border-color: #bbb;
+    color: #bbb;
+}
+
+body.dark .theme-toggle:hover {
+    background: #bbb;
+    color: #111;
+}
+
+body.dark .no-results {
+    color: #bbb;
+}
+
+body.dark .photo-item {
+    box-shadow: 4px 6px 12px rgba(255, 255, 255, 0.1);
+}
