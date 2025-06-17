@@ -1,4 +1,3 @@
-// Data.ts
 import Car1 from "../assets/Img/car1.jpg";
 import Car2 from "../assets/Img/car2.jpg";
 import Car3 from "../assets/Img/car3.jpg";
